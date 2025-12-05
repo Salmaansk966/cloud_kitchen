@@ -1,4 +1,4 @@
-package com.cloudkitchen.delivery.api;
+package com.cloudkitchen.delivery.controller;
 
 import com.cloudkitchen.delivery.optimization.eta.DeliveryEtaService;
 import com.cloudkitchen.delivery.optimization.eta.DeliveryEtaService.EtaResult;

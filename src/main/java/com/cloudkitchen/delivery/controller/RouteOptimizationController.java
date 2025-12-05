@@ -1,4 +1,4 @@
-package com.cloudkitchen.delivery.api;
+package com.cloudkitchen.delivery.controller;
 
 import com.cloudkitchen.delivery.service.RouteOptimizationService;
 import com.cloudkitchen.delivery.service.RouteOptimizationService.RouteStopDto;

@@ -1,4 +1,4 @@
-package com.cloudkitchen.delivery.api;
+package com.cloudkitchen.delivery.controller;
 
 import com.cloudkitchen.delivery.tracking.DeliveryTrackingService;
 import com.cloudkitchen.delivery.tracking.PartnerLocationUpdateRequest;
@@ -7,6 +7,8 @@ import com.cloudkitchen.dto.common.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 /**
  * REST API for live partner location updates used by the delivery app.
@@ -24,7 +26,7 @@ public class DeliveryTrackingController {
      */
     @PostMapping("/partner-location")
     public ResponseEntity<ApiResponse<Void>> updatePartnerLocation(
-            @RequestBody PartnerLocationUpdateRequest request) {
+            @RequestBody PartnerLocationUpdateRequest request) throws IOException {
         trackingService.handlePartnerLocationUpdate(request);
         return ResponseEntity.ok(ApiResponse.success("Location updated", null));
     }

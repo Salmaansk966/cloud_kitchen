@@ -1,4 +1,4 @@
-package com.cloudkitchen.delivery.api;
+package com.cloudkitchen.delivery.controller;
 
 import com.cloudkitchen.delivery.service.DeliveryAssignmentService;
 import com.cloudkitchen.dto.common.ApiResponse;
